@@ -2,17 +2,38 @@
 <html lang="en">
 	<head>
 		<style>
-			.leftmenu{
-				width: 75;
-				height: 100%;
-				color: rgb(124, 50, 106)
+			.container{
+				display: flex;
+				height: 405px;
+				vertical-align: middle;
+				
 
+			}
+			.leftmenu{
+				width: 30%;
+				margin-right: 3px;
+				background-color: rgb(61, 27, 53);
+
+			}
+			.right{
+				width: 70%;
+				background-color: rgb(241, 94, 94);
 			}
 			.myfront{
 				text-align: center;
 				color: rgb(14, 121, 81);
 			}
+			.footer{
+				display: inline-block;
+				height: 150px;
+				width: 100%;
+				margin-top: 5px;
+				background-color: aquamarine;
+				color: white;
+
+			}
 			.myphotos{
+				align-content: center;
 				width:300px;
 				height:300px;
 				border-radius:150px;
@@ -21,18 +42,15 @@
 		</style>
 	</head>
 	<body style="background-color: pink; text-align: center;">
-		<div class=leftmenu></div>
 		<h1 class=myfront>David el gnomo</h1>
 		<h2 class=myfront>Come gominolas</h2>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<img class=myphotos src="https://cdn.cienradios.com/wp-content/uploads/sites/2/2020/01/gato-con-sobrepeso-2-1.jpg"
-		 alt="la imagen de un gato gordo">
+		<div class=container>
+			<div class=leftmenu></div>
+			<div class=right><img class=myphotos src="https://cdn.cienradios.com/wp-content/uploads/sites/2/2020/01/gato-con-sobrepeso-2-1.jpg"
+			alt="la imagen de un gato gordo"></div>
+		</div>
+		<div></div>
+		<div class=footer>Un footer por aqui</div>
+		
 	</body>
 </html>
