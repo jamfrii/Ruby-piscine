@@ -1,0 +1,18 @@
+<body>
+	<h1>TITLE</h1>
+	<form>
+		<p>Name</p>
+		<input name="Nombre" id="1">
+		<p>Last name</p>
+		<input name="Apellido" id="2">
+		<p>Age</p>
+		<input name="Edad" id="3">
+		<button type=submit>Validar</button>
+	</form>	
+	<%
+		lista = [[21, "Maria", "Martinez"],[51, "Adrian", "muñoz"],[17, "David","Garcia"]]
+		lista.push([servlet_request.query["Edad"].to_i, servlet_request.query["Nombre"], servlet_request.query["Apellido"]])
+		lista1 = lista.sort
+	%>
+</body>
+

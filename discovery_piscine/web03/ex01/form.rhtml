@@ -1,0 +1,15 @@
+<body>
+	<form>
+		<p>Name</p>
+		<input name="Nombre" id="1">
+		<p>Last name</p>
+		<input name="Apellido" id="2">
+		<button type=submit>Validar</button>
+	</form>
+	<p>
+		hola
+		<%=servlet_request.query["Nombre"]%>
+		<%=servlet_request.query["Apellido"]%>
+	</p>
+
+</body>
