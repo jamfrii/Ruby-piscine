@@ -15,16 +15,16 @@
 		lista1 = lista.sort
 		i = -1
 		j = -1
-		lista.each do |n|
-			if n[1] = servlet_request.query["Nombre"]
-				i += 1
+		lista1.each do |n|
+			if n[1] == servlet_request.query["Nombre"]
+				i = j + 1
 			end
 			j += 1
 		end
 		h = j - i
 	%>
 	<p>
-		Hola <%= servlet_request.query["Nombre"] %>, tienes mas edad que <%= i %> 
+ 		Hola <%= servlet_request.query["Nombre"] %>, tienes mas edad que <%= i %> 
 		personas y menos edad que <%= h %>
 	</p>
 </body>
