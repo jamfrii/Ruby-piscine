@@ -14,10 +14,7 @@
 		lista.push([servlet_request.query["Edad"].to_i, servlet_request.query["Nombre"], servlet_request.query["Apellido"]])
 		lista1 = lista.sort
 		j = -1
-<<<<<<< HEAD
-=======
 		i = -1
->>>>>>> c7ddaefdab047ae87f6343bfd3b65342d79789d1
 		lista1.each do |n|
 			if n[1] == servlet_request.query["Nombre"]
 				i = j + 1
@@ -32,13 +29,5 @@
 			</p>"
 		end
 	%>
-<<<<<<< HEAD
-	<p>
- 		Hola <%= servlet_request.query["Nombre"] %>, tienes mas edad que <%= i %> 
-		personas y menos edad que <%= h %>
-	</p>
-=======
-
->>>>>>> c7ddaefdab047ae87f6343bfd3b65342d79789d1
 </body>
 
