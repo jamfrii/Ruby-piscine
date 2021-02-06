@@ -9,12 +9,15 @@
 		<input name="Edad" id="3">
 		<button type=submit>Validar</button>
 	</form>	
-	<%
+	<%=
 		lista = [[21, "Maria", "Martinez"],[51, "Adrian", "muñoz"],[17, "David","Garcia"]]
 		lista.push([servlet_request.query["Edad"].to_i, servlet_request.query["Nombre"], servlet_request.query["Apellido"]])
 		lista1 = lista.sort
-		i = -1
 		j = -1
+<<<<<<< HEAD
+=======
+		i = -1
+>>>>>>> c7ddaefdab047ae87f6343bfd3b65342d79789d1
 		lista1.each do |n|
 			if n[1] == servlet_request.query["Nombre"]
 				i = j + 1
@@ -22,10 +25,20 @@
 			j += 1
 		end
 		h = j - i
+		if servlet_request.query["Nombre"] != "" and servlet_request.query["Nombre"]
+			"<p>
+				Hola #{servlet_request.query["Nombre"]}, tienes mas edad que #{i} 
+				personas y menos edad que #{h}
+			</p>"
+		end
 	%>
+<<<<<<< HEAD
 	<p>
  		Hola <%= servlet_request.query["Nombre"] %>, tienes mas edad que <%= i %> 
 		personas y menos edad que <%= h %>
 	</p>
+=======
+
+>>>>>>> c7ddaefdab047ae87f6343bfd3b65342d79789d1
 </body>
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 print "Introduzca un número: "
-i = rand(0..100)
+i = rand(101)
 difficulty = 4
 nbr = gets.to_i
 while difficulty > 0
