@@ -1,0 +1,65 @@
+<head>
+	<style>
+		.title{
+			text-align: center;
+			color: green;
+			font-size: 100px;
+			margin-top: 10%;
+		}
+		.options{
+			display: flex;
+			height: 50px;
+			margin-top: 300px;
+			margin-left: 10%;
+		}
+		.left{
+			background-color: red;
+			width: 40%;
+		}
+		.right{
+			background-color: blue;
+			width: 40%;
+
+		}
+		.text{
+			text-align: center;
+			font-size: 20px;
+		}
+		.container{
+			display: grid;
+			grid-template-columns: auto auto auto;
+			position: relative;
+			width: 400px;
+			height: 400px;
+			margin-left: 35%;
+			background-color: grey;
+		}
+		.celda{
+			border: 2px solid green;
+
+		}
+	</style>
+</head>
+	<html>
+		<body>
+			<h1 class="title">TRES EN RAYA</h1>
+			<div class="options">
+				<div class="left" onclick="single_player()"><p class="text">SINGLE PLAYER</p></div>
+				<div class="right" onclick="multiplayer()"><p class="text">MULTIPLAYER</p></div>
+			</div>
+			
+			<div class="container">	
+				<div class="celda" id="11" onclick="rellena(11)">11</div>
+				<div class="celda" id="12" onclick="rellena(12)">12</div>
+				<div class="celda" id="13" onclick="rellena(13)">13</div>
+				<div class="celda" id="21" onclick="rellena(21)">21</div>
+				<div class="celda" id="22" onclick="rellena(22)">22</div>
+				<div class="celda" id="23" onclick="rellena(23)">23</div>
+				<div class="celda" id="31" onclick="rellena(31)">31</div>
+				<div class="celda" id="32" onclick="rellena(32)">32</div>
+				<div class="celda" id="33" onclick="rellena(33)">33</div>
+			</div>
+
+		</body>
+	</html>
+	<script src="tresenraya.js"></script>
