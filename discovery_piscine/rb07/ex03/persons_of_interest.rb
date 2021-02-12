@@ -3,7 +3,7 @@
 def nacimientos_famosos(hash)
     hash1 = hash.sort_by {|n, m| m.sort_by {|x, y| y}}
     hash1.each do |i, j|
-        puts j[:nombre] + " es una gran cientifica nacida en " + j[:fecha_de_nacimiento]
+        puts j[:nombre] + " es una gran cientifica nacida en " + j[:fecha_de_nacimiento] + "."
     end
 end
 

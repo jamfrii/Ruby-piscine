@@ -1,0 +1,9 @@
+<%= 
+	File.new("/Users/glopez-a/Desktop/Ruby/discovery_piscine/web04/ex01/hola.txt", "w+")
+	f = File.open("/Users/glopez-a/Desktop/Ruby/discovery_piscine/web04/ex01/hola.txt", "a")
+	f.write "hola que tal"
+	f.close
+	str = File.open("/Users/glopez-a/Desktop/Ruby/discovery_piscine/web04/ex01/hola.txt", "r")
+	puts str
+	"<p> #{str} </p>"
+%>

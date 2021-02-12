@@ -1,0 +1,37 @@
+<body>
+	<h1>TITLE</h1>
+	<form>
+		<p>Name</p>
+		<input name="Nombre" id="1">
+		<p>Last name</p>
+		<input name="Apellido" id="2">
+		<p>Age</p>
+		<input name="Edad" id="3">
+		<button type=submit>Validar</button>
+	</form>	
+	<%=
+		lista = [[21, "Maria", "Martinez"],[51, "Adrian", "muñoz"],[17, "David","Garcia"]]
+		lista.push([servlet_request.query["Edad"].to_i, servlet_request.query["Nombre"], servlet_request.query["Apellido"]])
+		lista1 = lista.sort
+		j = -1
+		i = -1
+		lista1.each do |n|
+			if n[1] == servlet_request.query["Nombre"]
+				i = j + 1
+			end
+			j += 1
+		end
+		h = j - i
+		str = servlet_request.query["Nombre"].to_s + " " + servlet_request.query["Apellido"].to_s + " " + servlet_request.query["Edad"].to_s + "\n"
+		f = File.open("/Users/glopez-a/Desktop/Ruby/discovery_piscine/web04/ex02/hola.txt", "a")
+		f.write(str)
+		f.close
+		if servlet_request.query["Nombre"] != "" and servlet_request.query["Nombre"]
+			"<p>
+				Hola #{servlet_request.query["Nombre"]}, tienes mas edad que #{i} 
+				personas y menos edad que #{h}
+			</p>"
+		end
+	%>
+</body>
+

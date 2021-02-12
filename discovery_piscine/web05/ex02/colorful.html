@@ -1,0 +1,32 @@
+<head>
+	<style>
+		.text{
+			text-align: center;
+			margin-top: 20%;
+			color: red;
+		}
+		.text:onclic{
+			text-align: center;
+			margin-top: 20%;
+			color: green;
+		}
+	</style>
+</head>
+	<html>
+		<body>
+			<div class="text" id="colour" onclick="change_color()">
+				<p>
+					Hola que tal!
+				</p>			
+			</div>
+			<script>
+				function change_color(){
+					var elem = document.getElementById('colour');
+					if (elem.style.color == 'red')
+						elem.style.color =  'green';
+					else
+						elem.style.color =  'red';
+				}
+			</script>
+		</body>
+	</html>

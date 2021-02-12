@@ -1,0 +1,11 @@
+
+<%= 
+	str = ""
+	File.open("/Users/glopez-a/Desktop/Ruby/discovery_piscine/web04/ex00/hola.txt", "r") do |f|
+				f.each_line do |line|
+					str = str + line + "\n"
+				end
+			end
+	puts str
+	"<p> #{str} </p>"
+%>

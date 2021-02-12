@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
 
-if ARGV.size != 2
+nbr = ARGV[1].scan(ARGV[0]).count
+if ARGV.size != 2 || nbr == 0
 	puts "none"
 else
-	puts ARGV[1].scan(ARGV[0]).count
+	puts nbr
 end

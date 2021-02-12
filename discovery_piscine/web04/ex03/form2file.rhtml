@@ -1,0 +1,30 @@
+<body>
+	<h1>TITLE</h1>
+	<form>
+		<p>Nombre del archivo</p>
+		<input name="Nombre_de_archivo" id="1">
+		<p>numero de linea</p>
+		<input name="Linea" id="2">
+		<p>Texto</p>
+		<input name="valor" id="3">
+		<button type=submit>Validar</button>
+	</form>	
+	<%=
+		s = ""
+		str = []
+		if servlet_request.query["Nombre_de_archivo"]
+			File.open("/Users/glopez-a/Desktop/Ruby/discovery_piscine/web04/ex03/" + servlet_request.query["Nombre_de_archivo"].to_s, "r") do |f|
+				f.each_line do |line|
+					str.push(line)
+				end
+			end
+		end
+		str[servlet_request.query["Linea"].to_i - 1] = servlet_request.query["valor"] + "\n"
+		f = File.open("/Users/glopez-a/Desktop/Ruby/discovery_piscine/web04/ex03/" + servlet_request.query["Nombre_de_archivo"].to_s, "w")
+		str.each |x|
+			s = s + x
+		f.write(s)
+		f.close
+	%>
+</body>
+
