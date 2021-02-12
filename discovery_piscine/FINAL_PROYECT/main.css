@@ -1,0 +1,52 @@
+.options {
+    display: table;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+  }
+.title{
+    text-align: center;
+    color: green;
+    font-size: 100px;
+    margin-top: 10%;
+}
+/* .options{
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+} */
+.left{
+    background-color: red;
+    width: 40%;
+}
+.right{
+    background-color: blue;
+    width: 40%;
+}
+.text{
+    text-align: center;
+    font-size: 20px;
+}
+.container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin-left: 35%;
+    background-color: grey;
+}
+.celda{
+    border: 2px solid green;
+}
+.button {
+    vertical-align: middle;
+	height:45px;
+    width:170px;
+    margin: auto;
+    background-color: beige;
+    border: 1px solid black;
+}
