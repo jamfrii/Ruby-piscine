@@ -4,7 +4,6 @@ var mapa = [[0, 0, 0],
 [0, 0, 0]]
 
 function options(type){
-    console.log(type)
     if (type == 1){
         document.getElementById("single").style="visibility:hidden"
         document.getElementById("multi").style="visibility:hidden"
@@ -27,7 +26,6 @@ function options(type){
 var turn = 0
 function checkwinner(nbr){
     i = 0;
-    console.log(i);
     while (i < 3)
     {
         if (mapa[i][0] == nbr && mapa[i][1] == nbr && mapa[i][2] == nbr)
@@ -47,11 +45,21 @@ function checkwinner(nbr){
         return 1;
     return 0;
 }
-// function end_game(nbr){
-//  if (nbr == 1)
-// }
+    function end_game(nbr){
+        if (nbr == 1){
+            document.getElementById("juego").innerHTML = "PLAYER1 WINS";
+            document.getElementById("juego").style.color = "green";  
+
+        }
+            
+        if (nbr == 2){
+            document.getElementById("juego").innerHTML = "PLAYER2 WINS";
+            document.getElementById("juego").style.color = "red";
+
+        }
+}
+
 function rellena(a){
-    console.log(a);
     if  (mapa[a.id[0]][a.id[1]] == 0 && turn == 0){
         a.style.backgroundColor = "green";
         a.style.textAlign = "center";
@@ -59,7 +67,7 @@ function rellena(a){
         mapa[a.id[0]][a.id[1]] = 1;
         turn = (turn + 1) % 2;
         if (checkwinner(1))
-            a.style.backgroundColor = "blue";
+            end_game(1);
     }
     if (mapa[a.id[0]][a.id[1]] == 0 && turn == 1){
         a.style.backgroundColor = "red";
