@@ -10,14 +10,6 @@
     font-size: 100px;
     margin-top: 10%;
 }
-/* .options{
-    display: flex;
-    position: absolute;
-    flex-direction: row;
-    margin-left: auto;
-    margin-right: auto;
-    height: 50px;
-} */
 .left{
     background-color: red;
     width: 40%;
@@ -36,8 +28,10 @@
     position: relative;
     width: 400px;
     height: 400px;
-    margin-left: 35%;
+    margin-left: auto;
+    margin-right: auto;
     background-color: grey;
+    margin-bottom: 1rem;
 }
 .celda{
     border: 2px solid green;
