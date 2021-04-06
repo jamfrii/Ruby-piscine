@@ -28,13 +28,21 @@
     position: relative;
     width: 400px;
     height: 400px;
+<<<<<<< HEAD
     margin-left: auto;
     margin-right: auto;
+=======
+    margin-left: 35%;
+    font-size: 40px;
+    text-align: center;
+    vertical-align: center;
+>>>>>>> 3844b04f4540fa5c55b34baadadea96bd6e1ae78
     background-color: grey;
     margin-bottom: 1rem;
 }
 .celda{
-    border: 2px solid green;
+    position: sticky;
+    border: 2px solid black;
 }
 .button {
     vertical-align: middle;
